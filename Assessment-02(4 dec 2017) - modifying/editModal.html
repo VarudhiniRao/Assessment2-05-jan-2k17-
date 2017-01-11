@@ -1,0 +1,150 @@
+<div class="modal fade" id="myModalForEdit" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Payment Information</h4>
+            </div>
+            <div class="modal-body clearfix">
+                <div class="col-md-6">
+                    <label for="sel1 ">Payment Type
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <!-- <input type="text" ng-model="textTyped"> -->
+                    <div class="dropdown open">
+                        <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select}} <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <input type="text" ng-model="vm.newobject.textTyped">
+                            </li>
+                            <li ng-repeat="value in myPathValue2|filter:'textTyped'" ng-click="vm.changeSelect(value)">
+                                {{value}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 ">
+                    <div class="form-group ">
+                        <label for="sel1 ">Account Type
+                            <sup-script class="asteric ">*</sup-script>
+                        </label>
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select2}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="vm.newobject.textTyped2">
+                                </li>
+                                <li ng-repeat="value in myData3.result|filter:textTyped2" ng-click="vm.changeSelect2(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Frequency
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <div class="dropdown ">
+                        <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select3}} <span class="caret"></span> </a>
+                        <ul class="dropdown-menu" style="width: 80px;">
+                            <li>
+                                <input type="text" ng-model="vm.newobject.textTyped3">
+                            </li>
+                            <li ng-repeat="value in vm.myPathValue1|filter:textTyped3" ng-click="vm.changeSelect3(value)">
+                                {{value}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Period Start Date
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <input type="date" class="form-control" name="bday" ng-model="vm.timeEntered">
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Payment Timing
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <div class="dropdown ">
+                        <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select4}} <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <input type="text" ng-model="vm.newobject.textTyped4">
+                            </li>
+                            <li ng-repeat="value in vm.myData8.result|filter:textTyped4" ng-click="vm.changeSelect4(value.value)">
+                                {{value.value}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Payment Due On
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <div class="dropdown ">
+                        <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select5}} <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <input type="text" ng-model="vm.newobject.textTyped5">
+                            </li>
+                            <li ng-repeat="value in vm.myData7.result|filter:textTyped5" ng-click="vm.changeSelect5(value.value)">
+                                {{value.value}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Payment Due Day
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <div class="dropdown ">
+                        <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select6}} <span class="caret"></span> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <input type="text" ng-model="vm.newobject.textTyped6">
+                            </li>
+                            <li ng-repeat="value in vm.myData6.result|filter:textTyped6" ng-click="vm.changeSelect6(value.value)">
+                                {{value.value}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <label for="sel1 ">Accounting Count Center
+                        <sup-script class="asteric ">*</sup-script>
+                    </label>
+                    <label for="usr "></label>
+                    <input type="text " class="form-control " id="usr " ng-model="vm.newobject.accountdetails">
+                </div>
+                <div class="col-md-12">
+                    <label>
+                        &nbsp
+                        <br>
+                        <input type="checkbox"> Option Term Payment &nbsp
+                        <br> &nbsp
+                        <br>
+                    </label>
+                </div>
+                <div class="col-md-12">
+                    <label for="usr">Description</label>
+                    <input type="text " class="form-control description " id="usr ">
+                </div>
+            </div>
+            <div class="modal-footer ">
+                <div class="col-md-2 text-center">
+                    <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
+                    <br>
+                    <p>Information</p>
+                </div>
+                <div class="col-md-2 text-center">
+                    <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
+                    <br>
+                    <p>Information</p>
+                </div>
+                <button type="button " data-dismiss="modal "><i style="font-size: 30px;" ng-click="vm.sureForSave($index)">Save</i></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="main-div ">
+    <table class="table table-hover ">
+        <thead class="table-background ">
+            <tr>
+                <th> </th>
+                <th>Frequency Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Total Cash With Tax</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="data in vm.DetailedArray ">
+            <tr>
+                <td>{{data.paymentType}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button data-toggle="collapse" data-target="#{{$index}}" class="accordion-toggle"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+            <tr style="border-top: none;">
+                <td colspan="6" class="hiddenRow">
+                    <div id="{{$index}}" class="accordian-body collapse">
+                        <table class="table">
+                            <tbody>
+                                <tr ng-repeat="x in data.AddFeaturesArray" class="hiddenRow track by index">
+                                    <td><i class="fa fa-hourglass" aria-hidden="true"></i></td>
+                                    <td>{{x.Frequency}}</td>
+                                    <td>{{x.startDate}}</td>
+                                    <td>{{x.paymentType}}</td>
+                                    <td>{{x.AmountBase}}</td>
+                                    <td>
+                                        <button><i class="fa fa-pencil" aria-hidden="true" ng-click="vm.edit($parent.$index,$index)"></i></button>
+                                        <button><i class="fa fa-times" aria-hidden="true" ng-click="vm.delete($parent.$index,$index)"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row "></th>
+                <td colspan="2 "></td>
+                <td></td>
+                <td>
+                </td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <button ng-click="vm.fnOpen() " type="button" class="btn btn-primary btn-block table-background2 "><i class="fa fa-plus" aria-hidden="true"></i> ADD</button>
+</div>

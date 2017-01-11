@@ -1,0 +1,109 @@
+<div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Payment Parameters</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <div class="col-md-6">
+                        <label for="sel1 ">Growth Type
+                        </label>
+                        <!-- <input type="text" ng-model="textTyped"> -->
+                        <div class="dropdown ">
+                            <a href="#" class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{
+                                    vm.select8}} <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <input type="text" ng-model="vm.textTyped8">
+                                </li>
+                                <li ng-repeat="value in vm.myData5.result|filter:textTyped8" ng-click="vm.changeSelect8(value.value)">
+                                    {{value.value}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="form-group ">
+                            <label for="sel1 ">Fixed Growth
+                            </label>
+                            <div>
+                                <input type="text" ng-model="vm.textTyped_5" placeholder="0" style="height: 35px; width: 400px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="col-md-6">
+                            <label for="sel1 ">Number Of Schedule
+                            </label>
+                            <!-- <input type="text" ng-model="textTyped"> -->
+                            <div>
+                                <input type="text" ng-model="vm.textTyped_1" placeholder="0" style="height: 35px; width: 400px;">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="sel1 ">Adjust Every(X) Month
+                            </label>
+                            <!-- <input type="text" ng-model="textTyped"> -->
+                            <div>
+                                <input type="text" ng-model="vm.textTyped_2" placeholder="0" style="height: 35px; width: 400px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <label for="sel1 ">Charge Amount Basis
+                                <sup-script class="asteric ">*</sup-script>
+                            </label>
+                            <div class="dropdown ">
+                                <div class="btn btn-default dropdown-toggle text-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> {{vm.select7}} <span class="caret"></span> </div>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <input type="text" ng-model="vm.textTyped7">
+                                    </li>
+                                    <li ng-repeat="value in vm.myData4 .result|filter:textTyped7" ng-click="vm.changeSelect7(value.value)">
+                                        {{value.value}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="sel1 ">Accounting Count Center
+                            </label>
+                            <label for="usr "></label>
+                            <input type="text " class="form-control " ng-model="vm.textTyped_3" id="usr" placeholder="0" style="width: 90px;"><span>Square-feet</span>
+                        </div>
+                        <div class="col-md-4 ">
+                            <label for="sel1 ">Amount Per Basis
+                            </label>
+                            <div>
+                                <input type="text" ng-model="vm.textTyped_4" placeholder="0" style="height: 35px; width: 280px;">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="modal-footer ">
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-info-circle" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="fa fa-calendar-o fa-1x" style="font-size: 30px;" aria-hidden="true "></i>
+                        <br>
+                        <p>Information</p>
+                    </div>
+                    <button type="button " data-dismiss="modal "><i style="font-size: 30px;" class="fa fa-angle-left " aria-hidden="true " ng-click="vm.moveBack()"></i></button>
+                    <button type="button " data-dismiss="modal " ng-click="vm.SaveMe()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
